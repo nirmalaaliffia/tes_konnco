@@ -1,0 +1,80 @@
+1. Buatkan fungsi untuk memeriksa apakah sebuah bilangan adalah bilangan prima.
+jawab :
+bilangan prima adalah bilangan yang habis dibagi oleh angka 1 dan dirinya sendiri. 
+<?php
+    $n = 7; // silakan masukkan nilai N di sini
+    $status ="prima";
+    for ($i = 2; $i <= $n-1; $i++){
+        if ($n % $i == 0){
+            $status = "tidak prima";
+            break;
+            }
+    }
+    
+    echo "bilangan ".$n."adalah ".$status;
+
+?>
+
+
+2. Buatkan fungsi untuk menentukan bilangan terbesar dari sederet bilangan dalam array
+berikut: $bilangan = array(11, 6, 31, 201, 99, 861, 1, 7, 14, 79). Tanpa menggunakan built in
+fungsi array PHP;
+jawab :
+   <?php 
+               $bilangan = array(11, 6, 31, 201, 99, 861, 1, 7, 14, 79);
+               $n = count($bilangan);  
+               $max = $bilangan[0]; 
+               for ($i = 1; $i < $n; $i++) {
+                if ($max < $bilangan[$i]) {
+                    $max = $bilangan[$i]; 
+                }  
+               }
+               echo $max; echo "<br>";  
+     ?>
+
+3.Buatkan fungsi yang dapat menghasilkan format berikut:
+1
+12
+123
+1234
+12345 
+123456 
+1234567 
+12345678
+jawab :
+ <?php
+    for ($i=1; $i<=9; $i++){
+        for ($j=1; $j<$i; $j++){
+            echo $j;
+        }
+        echo "<br>";
+     }
+ ?> 
+
+
+ 4. Dengan menggunakan teknik bubble sorting, urutkan bilangan-bilangan berikut: $bilangan = array(99, 2, 64, 8, 111, 33, 65, 11, 102, 50);
+jawab :
+  <?php 
+     $bilangan = array(99, 2, 64, 8, 111, 33, 65, 11, 102, 50);
+     $n = count($bilangan);
+    do {
+        $swapped = false;
+        for ($i = 0; $i < $n - 1; $i++) {
+            // swap when out of order
+            if ($bilangan[$i] > $bilangan[$i + 1]) {
+                $temp = $bilangan[$i];
+                $bilangan[$i] = $bilangan[$i + 1];
+                $bilangan[$i + 1] = $temp;
+                $swapped = true;
+            }
+        }
+        $n--;
+    }
+    while ($swapped);
+    @dd($bilangan);
+  ?>
+
+
+  5.
+
+
